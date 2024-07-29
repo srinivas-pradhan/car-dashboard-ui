@@ -1,6 +1,6 @@
 const Sidebar = () => {
     return (
-        <div className="fixed w-1/5 left-0 top-0 h-screen bg-white z-10 border-r-2 border-black border-opacity-5">
+        <div className="fixed w-1/5 left-0 top-0 h-screen bg-white z-10 border-r-2 border-black border-opacity-10">
             <div className="p-5">
                 Motiv
             </div>
