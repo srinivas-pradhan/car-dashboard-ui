@@ -1,4 +1,6 @@
 import ClientOnly from '@/components/ClientOnly';
+import Sidebar from '@/components/SideBar';
+import Navbar from '@/components/NavBar';
 
 
 export default function RootLayout({
@@ -8,7 +10,11 @@ export default function RootLayout({
 }) {
   return (
     <ClientOnly>
-        {children}
+        <div className="bg-neutral-100 h-screen">
+            <Sidebar/>
+            <Navbar/>
+            {children}
+        </div>
     </ClientOnly>
   )
 }
