@@ -12,7 +12,7 @@ const Sidebar = () => {
                 <ul onClick = {() => router.push('/')} className="flex flex-row gap-4">
                     <li>
                         <Image 
-                            className="rounded-lg cursor-pointer"
+                            className="rounded-lg cursor-pointer -mt-0.5"
                             height="37"
                             width="37"
                             alt="Avatar"
@@ -25,7 +25,7 @@ const Sidebar = () => {
                 </ul>
             </div>
             <ul className="pt-16 ml-8 mr-10 space-y-0.5 text-gray-400 text-lg">
-                <li className="p-3 rounded-lg hover:text-gray-500 hover:bg-slate-400 hover:bg-opacity-20 cursor-pointer">
+                <li onClick = {() => router.push('/')} className="p-3 rounded-lg hover:text-gray-500 hover:bg-slate-400 hover:bg-opacity-20 cursor-pointer">
                     <ul className="flex flex-row gap-2">
                         <li>
                             <Image 
@@ -39,7 +39,7 @@ const Sidebar = () => {
                         <li>Dashboard</li>
                     </ul>
                 </li>
-                <li className="p-3 rounded-lg hover:text-gray-500 hover:bg-slate-400 hover:bg-opacity-20 cursor-pointer">
+                <li onClick = {() => router.push('/assets')} className="p-3 rounded-lg hover:text-gray-500 hover:bg-slate-400 hover:bg-opacity-20 cursor-pointer">
                     <ul className="flex flex-row gap-2">
                         <li>
                             <Image 
@@ -53,7 +53,7 @@ const Sidebar = () => {
                         <li>Assets</li>
                     </ul>
                 </li>
-                <li className="p-3 rounded-lg hover:text-gray-500 hover:bg-slate-400 hover:bg-opacity-20 cursor-pointer">
+                <li onClick = {() => router.push('/bookings')} className="p-3 rounded-lg hover:text-gray-500 hover:bg-slate-400 hover:bg-opacity-20 cursor-pointer">
                     <ul className="flex flex-row gap-2">
                         <li>
                             <Image 
@@ -67,7 +67,7 @@ const Sidebar = () => {
                         <li>Booking</li>
                     </ul>
                 </li>
-                <li className="p-3 rounded-lg hover:text-gray-500 hover:bg-slate-400 hover:bg-opacity-20 cursor-pointer">
+                <li onClick = {() => router.push('/sell')} className="p-3 rounded-lg hover:text-gray-500 hover:bg-slate-400 hover:bg-opacity-20 cursor-pointer">
                     <ul className="flex flex-row gap-2">
                         <li>
                             <Image 
@@ -81,7 +81,7 @@ const Sidebar = () => {
                         <li>Sell Cars</li>
                     </ul>
                 </li>
-                <li className="p-3 rounded-lg hover:text-gray-500 hover:bg-slate-400 hover:bg-opacity-20 cursor-pointer">
+                <li onClick = {() => router.push('/buy')} className="p-3 rounded-lg hover:text-gray-500 hover:bg-slate-400 hover:bg-opacity-20 cursor-pointer">
                     <ul className="flex flex-row gap-2">
                         <li>
                             <Image 
@@ -95,7 +95,7 @@ const Sidebar = () => {
                         <li>Buy Cars</li>
                     </ul>
                 </li>
-                <li className="p-3 rounded-lg hover:text-gray-500 hover:bg-slate-400 hover:bg-opacity-20 cursor-pointer">
+                <li onClick = {() => router.push('/services')} className="p-3 rounded-lg hover:text-gray-500 hover:bg-slate-400 hover:bg-opacity-20 cursor-pointer">
                     <ul className="flex flex-row gap-2">
                         <li>
                             <Image 
@@ -109,7 +109,7 @@ const Sidebar = () => {
                         <li>Services</li>
                     </ul>
                 </li>
-                <li className="p-3 rounded-lg hover:text-gray-500 hover:bg-slate-400 hover:bg-opacity-20 cursor-pointer">
+                <li onClick = {() => router.push('/calendar')} className="p-3 rounded-lg hover:text-gray-500 hover:bg-slate-400 hover:bg-opacity-20 cursor-pointer">
                     <ul className="flex flex-row gap-2">
                         <li>
                             <Image 
@@ -123,7 +123,7 @@ const Sidebar = () => {
                         <li>Calendar</li>
                     </ul>
                 </li>
-                <li className="p-3 rounded-lg hover:text-gray-500 hover:bg-slate-400 hover:bg-opacity-20 cursor-pointer">
+                <li onClick = {() => router.push('/messages')} className="p-3 rounded-lg hover:text-gray-500 hover:bg-slate-400 hover:bg-opacity-20 cursor-pointer">
                     <ul className="flex flex-row gap-2">
                         <li>
                             <Image 
@@ -139,9 +139,57 @@ const Sidebar = () => {
                 </li>
 
             </ul>
-            <ul>
-                <li>One</li>
-                <li>Two</li>
+            <div className="">
+
+            </div>
+            <ul className="
+                fixed 
+                bottom-0 
+                ml-8 
+                mr-10 
+                mb-6 
+                space-y-2
+            ">
+                <li className="p-2 
+                    rounded-lg
+                    cursor-pointer
+                    text-gray-400
+                    hover:text-gray-500
+                    text-lg
+                ">
+                    <ul onClick = {() => router.push('/settings')} className="flex flex-row gap-2">
+                        <li>
+                            <Image 
+                                className="rounded-lg cursor-pointer mt-0.5"
+                                height="25"
+                                width="25"
+                                alt="Settings"
+                                src="/Settings.png"
+                            />
+                        </li>
+                        <li>Settings</li>
+                    </ul>
+                </li>
+                <li className="p-2 
+                    rounded-lg
+                    cursor-pointer
+                    text-gray-400
+                    hover:text-gray-500
+                    text-lg
+                ">
+                    <ul onClick = {() => router.push('/')} className="flex flex-row gap-2">
+                        <li>
+                            <Image 
+                                className="rounded-lg cursor-pointer mt-0.5"
+                                height="25"
+                                width="25"
+                                alt="Logout"
+                                src="/Logout.png"
+                            />
+                        </li>
+                        <li>Log out</li>
+                    </ul>
+                </li>
             </ul>
         </div>
     );
