@@ -10,7 +10,7 @@ export default function RootLayout({
 }) {
   return (
     <ClientOnly>
-      <div className="bg-neutral-100 h-screen absolute">
+      <div className="bg-neutral-100 dark:bg-gray-700 h-screen absolute">
         <Sidebar/>
         <Navbar/>    
         {children}    
