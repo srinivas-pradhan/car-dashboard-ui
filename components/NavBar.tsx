@@ -62,7 +62,7 @@ const Navbar = () => {
                         </li>
                         <li>
                             <SignedIn>
-                                <UserButton />
+                                <UserButton afterSignOutUrl="/"/>
                             </SignedIn>
                         </li>
                     </ul>
