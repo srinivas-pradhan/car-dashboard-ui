@@ -17,7 +17,7 @@ const Navbar = () => {
             >
             <ul className="flex flex-row justify-end space-x-[40%]">
                 <li className="mt-2">
-                    <Command className="rounded-lg border shadow-md w-96 bg-neutral-100 dark:bg-gray-700 dark:text-white">
+                    <Command className="rounded-lg border w-96 bg-neutral-100 dark:bg-gray-700 dark:text-white">
                         <CommandInput placeholder="Type a command or search..." />
                     </Command>
                 </li>
