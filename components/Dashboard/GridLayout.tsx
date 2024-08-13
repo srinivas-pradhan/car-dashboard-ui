@@ -7,6 +7,8 @@ const  GridLayout = () => {
                 <ul className="grid grid-cols-4 ml-10 mr-10 mt-4 gap-x-10 gap-y-6">
                     <li className="
                         bg-white 
+                        dark:bg-tile-gray
+                        dark:hover:bg-custom-purple1
                         hover:bg-custom-purple1 
                         hover:opacity-75 
                         hover:shadow-inner 
@@ -21,7 +23,9 @@ const  GridLayout = () => {
                         Text
                     </li>
                     <li className="
-                        bg-white 
+                        bg-white
+                        dark:bg-tile-gray
+                        dark:hover:bg-custom-purple1
                         hover:bg-custom-purple1 
                         hover:opacity-75 
                         hover:shadow-inner 
@@ -36,7 +40,9 @@ const  GridLayout = () => {
                         Text
                     </li>
                     <li className="
-                        bg-white 
+                        bg-white
+                        dark:bg-tile-gray
+                        dark:hover:bg-custom-purple1 
                         hover:bg-custom-purple1 
                         hover:opacity-75 
                         hover:shadow-inner 
@@ -51,7 +57,9 @@ const  GridLayout = () => {
                         Text
                     </li>
                     <li className="
-                        bg-white 
+                        bg-white
+                        dark:bg-tile-gray
+                        dark:hover:bg-custom-purple1 
                         hover:bg-custom-purple1 
                         hover:opacity-75 
                         hover:shadow-inner 
@@ -66,7 +74,8 @@ const  GridLayout = () => {
                         Text
                     </li>
                     <li className="
-                        bg-white 
+                        bg-white
+                        dark:bg-tile-gray
                         hover:shadow-inner 
                         hover:-translate-y-1 
                         hover:scale-105
@@ -83,7 +92,8 @@ const  GridLayout = () => {
                         Text
                     </li>
                     <li className="
-                        bg-white 
+                        bg-white
+                        dark:bg-tile-gray
                         hover:shadow-inner 
                         hover:-translate-y-1 
                         hover:scale-105
