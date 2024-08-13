@@ -32,6 +32,12 @@ const config = {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
       },
+      colors: {
+        'custom-purple1':'#A66FF0',
+        'custom-yellow': '#E1DFA4',
+        'custom-blue': '#E3ECF1',
+        'custom-pink': '#F4E3E5'
+      }
     },
   },
   plugins: [require("tailwindcss-animate")],
