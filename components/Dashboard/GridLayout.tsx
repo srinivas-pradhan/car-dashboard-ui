@@ -80,6 +80,7 @@ const  GridLayout = () => {
                         hover:-translate-y-1 
                         hover:scale-105
                         hover:border-2
+                        dark:border-white
                         hover:border-opacity-50
                         hover:border-black
                         delay-75 
@@ -98,6 +99,7 @@ const  GridLayout = () => {
                         hover:-translate-y-1 
                         hover:scale-105
                         hover:border-2
+                        dark:border-white
                         hover:border-opacity-50
                         hover:border-black
                         delay-75 
