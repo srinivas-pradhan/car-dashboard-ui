@@ -68,7 +68,7 @@ const  GridLayout = () => {
                                             dark:group-hover:text-black 
                                             dark:group-hover:fill-black 
                                             stroke-current 
-                                            duration-500 
+                                            duration-1000 
                                             fill
                                             " 
                                             text-anchor="middle" 
@@ -141,7 +141,7 @@ const  GridLayout = () => {
                                             dark:group-hover:text-black 
                                             dark:group-hover:fill-black 
                                             stroke-current 
-                                            duration-500 
+                                            duration-1000 
                                             fill
                                             " 
                                             text-anchor="middle" 
@@ -214,7 +214,7 @@ const  GridLayout = () => {
                                             dark:group-hover:text-black 
                                             dark:group-hover:fill-black 
                                             stroke-current 
-                                            duration-500 
+                                            duration-1000 
                                             fill
                                             " 
                                             text-anchor="middle" 
@@ -287,7 +287,7 @@ const  GridLayout = () => {
                                             dark:group-hover:text-black 
                                             dark:group-hover:fill-black 
                                             stroke-current 
-                                            duration-500 
+                                            duration-1000 
                                             fill
                                             " 
                                             text-anchor="middle" alignment-baseline="middle">
