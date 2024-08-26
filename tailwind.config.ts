@@ -34,6 +34,7 @@ const config = {
       },
       colors: {
         'custom-purple1':'#A66FF0',
+        'custom-purple2':'#B37EFC',
         'custom-yellow': '#E1DFA4',
         'custom-blue': '#E3ECF1',
         'custom-pink': '#F4E3E5',
