@@ -40,7 +40,7 @@ const  GridLayout = () => {
                                 <li className="size-24 flex justify-center items-center">
                                     <svg className="w-full h-full" viewBox="0 0 100 100">
                                         <circle
-                                        className="text-neutral-100 group-hover:text-custom-purple2 duration-500 stroke-current"
+                                        className="text-neutral-100 dark:text-black group-hover:text-custom-purple2 duration-500 stroke-current"
                                         stroke-width="10"
                                         cx="50"
                                         cy="50"
@@ -58,7 +58,24 @@ const  GridLayout = () => {
                                         stroke-dasharray="251.2" 
                                         stroke-dashoffset="calc(251.2px - (251.2px * 45) / 100)"
                                         ></circle>
-                                        <text x="50" y="50" className="text-xl font-bold group-hover:text-white group-hover:fill-white stroke-current duration-500 fill" text-anchor="middle" alignment-baseline="middle">45%</text>
+                                        <text x="50" y="50" className="
+                                            text-xl 
+                                            font-bold 
+                                            group-hover:text-white
+                                            group-hover:fill-white
+                                            dark:text-white
+                                            dark:fill-white
+                                            dark:group-hover:text-black 
+                                            dark:group-hover:fill-black 
+                                            stroke-current 
+                                            duration-500 
+                                            fill
+                                            " 
+                                            text-anchor="middle" 
+                                            alignment-baseline="middle"
+                                            >
+                                                45%
+                                            </text>
                                     </svg>
                                 </li>
                             </ul>
@@ -96,7 +113,7 @@ const  GridLayout = () => {
                                 <li className="size-24 flex justify-center items-center">
                                     <svg className="w-full h-full" viewBox="0 0 100 100">
                                         <circle
-                                        className="text-neutral-100 group-hover:text-custom-purple2 duration-500 stroke-current"
+                                        className="text-neutral-100 dark:text-black group-hover:text-custom-purple2 duration-500 stroke-current"
                                         stroke-width="10"
                                         cx="50"
                                         cy="50"
@@ -114,7 +131,24 @@ const  GridLayout = () => {
                                         stroke-dasharray="251.2" 
                                         stroke-dashoffset="calc(251.2px - (251.2px * 75) / 100)"
                                         ></circle>
-                                        <text x="50" y="50" className="text-xl font-bold group-hover:text-white group-hover:fill-white stroke-current duration-500 fill border-nbo" text-anchor="middle" alignment-baseline="middle">75%</text>
+                                        <text x="50" y="50" className="
+                                            text-xl 
+                                            font-bold 
+                                            group-hover:text-white
+                                            group-hover:fill-white
+                                            dark:text-white
+                                            dark:fill-white
+                                            dark:group-hover:text-black 
+                                            dark:group-hover:fill-black 
+                                            stroke-current 
+                                            duration-500 
+                                            fill
+                                            " 
+                                            text-anchor="middle" 
+                                            alignment-baseline="middle"
+                                            >
+                                                75%
+                                            </text>
                                     </svg>
                                 </li>
                             </ul>
@@ -152,7 +186,7 @@ const  GridLayout = () => {
                                 <li className="size-24 flex justify-center items-center">
                                     <svg className="w-full h-full" viewBox="0 0 100 100">
                                         <circle
-                                        className="text-neutral-100 group-hover:text-custom-purple2 duration-500 stroke-current"
+                                        className="text-neutral-100 dark:text-black group-hover:text-custom-purple2 duration-500 stroke-current"
                                         stroke-width="10"
                                         cx="50"
                                         cy="50"
@@ -170,7 +204,24 @@ const  GridLayout = () => {
                                         stroke-dasharray="251.2" 
                                         stroke-dashoffset="calc(251.2px - (251.2px * 9) / 100)"
                                         ></circle>
-                                        <text x="50" y="50" className="text-xl font-bold group-hover:text-white group-hover:fill-white stroke-current duration-500" text-anchor="middle" alignment-baseline="middle">9%</text>
+                                        <text x="50" y="50" className="
+                                            text-xl 
+                                            font-bold 
+                                            group-hover:text-white
+                                            group-hover:fill-white
+                                            dark:text-white
+                                            dark:fill-white
+                                            dark:group-hover:text-black 
+                                            dark:group-hover:fill-black 
+                                            stroke-current 
+                                            duration-500 
+                                            fill
+                                            " 
+                                            text-anchor="middle" 
+                                            alignment-baseline="middle"
+                                            >
+                                                9%
+                                            </text>
                                     </svg>
                                 </li>
                             </ul>
@@ -208,7 +259,7 @@ const  GridLayout = () => {
                                 <li className="size-24 flex justify-center items-center">
                                     <svg className="w-full h-full" viewBox="0 0 100 100">
                                         <circle
-                                        className="text-neutral-100 group-hover:text-custom-purple2 duration-500 stroke-current"
+                                        className="text-neutral-100 dark:text-black group-hover:text-custom-purple2 duration-500 stroke-current"
                                         stroke-width="10"
                                         cx="50"
                                         cy="50"
@@ -226,7 +277,22 @@ const  GridLayout = () => {
                                         stroke-dasharray="251.2" 
                                         stroke-dashoffset="calc(251.2px - (251.2px * 25) / 100)"
                                         ></circle>
-                                        <text x="50" y="50" className="text-xl font-bold group-hover:text-white group-hover:fill-white stroke-current duration-500 fill" text-anchor="middle" alignment-baseline="middle">25%</text>
+                                        <text x="50" y="50" className="
+                                            text-xl 
+                                            font-bold 
+                                            group-hover:text-white
+                                            group-hover:fill-white
+                                            dark:text-white
+                                            dark:fill-white
+                                            dark:group-hover:text-black 
+                                            dark:group-hover:fill-black 
+                                            stroke-current 
+                                            duration-500 
+                                            fill
+                                            " 
+                                            text-anchor="middle" alignment-baseline="middle">
+                                            25%
+                                        </text>
                                     </svg>
                                 </li>
                             </ul>
