@@ -12,3 +12,12 @@ datasource db {
   provider = "mongodb"
   url      = env("DATABASE_URL")
 }
+
+model DashboardUtilityTiles {
+  id                String          @id @default(auto()) @map("_id") @db.ObjectId
+  Userid            String          @unique
+  Energy            Int
+  Range             Int 
+  BreakFluid        Int
+  TireRange         Int
+}

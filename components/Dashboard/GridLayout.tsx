@@ -2,8 +2,31 @@
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 
+import { useState, useEffect } from "react";
+import { useUser } from '@clerk/nextjs'
+
 
 const  GridLayout = () => {
+    const { isLoaded, user  } = useUser();
+    if (!isLoaded || !user) {
+        return null
+    }
+
+    const [ apidata, setapiData ] = useState({});
+
+    useEffect(() => {
+        fetch(`/api/dashboard/${user.primaryEmailAddress.emailAddress}`)
+        .then((res) => res.json())
+        .then((apidata) => {
+            setapiData(apidata)
+        })
+    },[])
+
+    var energy_DS = 251.2 - (251.2 * `${apidata.Energy}`) / 100
+    var rangeDS =  251.2 - (251.2 * `${apidata.Range}`) / 100
+    var breakfluidDS =  251.2 - (251.2 * `${apidata.BreakFluid}`) / 100
+    var tirewearDS =  251.2 - (251.2 * `${apidata.TireRange}`) / 100
+    
     return (  
         <div className="pl-[20%] flex justify-center">
             <div>
@@ -56,7 +79,7 @@ const  GridLayout = () => {
                                         r="40"
                                         fill="transparent"
                                         stroke-dasharray="251.2" 
-                                        stroke-dashoffset="calc(251.2px - (251.2px * 45) / 100)"
+                                        stroke-dashoffset={energy_DS}
                                         ></circle>
                                         <text x="50" y="50" className="
                                             text-xl 
@@ -74,7 +97,7 @@ const  GridLayout = () => {
                                             text-anchor="middle" 
                                             alignment-baseline="middle"
                                             >
-                                                45%
+                                                {apidata.Energy}%
                                             </text>
                                     </svg>
                                 </li>
@@ -129,7 +152,7 @@ const  GridLayout = () => {
                                         r="40"
                                         fill="transparent"
                                         stroke-dasharray="251.2" 
-                                        stroke-dashoffset="calc(251.2px - (251.2px * 75) / 100)"
+                                        stroke-dashoffset={rangeDS}
                                         ></circle>
                                         <text x="50" y="50" className="
                                             text-xl 
@@ -147,7 +170,7 @@ const  GridLayout = () => {
                                             text-anchor="middle" 
                                             alignment-baseline="middle"
                                             >
-                                                75%
+                                                {apidata.Range}%
                                             </text>
                                     </svg>
                                 </li>
@@ -202,7 +225,7 @@ const  GridLayout = () => {
                                         r="40"
                                         fill="transparent"
                                         stroke-dasharray="251.2" 
-                                        stroke-dashoffset="calc(251.2px - (251.2px * 9) / 100)"
+                                        stroke-dashoffset={breakfluidDS}
                                         ></circle>
                                         <text x="50" y="50" className="
                                             text-xl 
@@ -220,7 +243,7 @@ const  GridLayout = () => {
                                             text-anchor="middle" 
                                             alignment-baseline="middle"
                                             >
-                                                9%
+                                                {apidata.BreakFluid}%
                                             </text>
                                     </svg>
                                 </li>
@@ -275,7 +298,7 @@ const  GridLayout = () => {
                                         r="40"
                                         fill="transparent"
                                         stroke-dasharray="251.2" 
-                                        stroke-dashoffset="calc(251.2px - (251.2px * 25) / 100)"
+                                        stroke-dashoffset={tirewearDS}
                                         ></circle>
                                         <text x="50" y="50" className="
                                             text-xl 
@@ -291,7 +314,7 @@ const  GridLayout = () => {
                                             fill
                                             " 
                                             text-anchor="middle" alignment-baseline="middle">
-                                            25%
+                                            {apidata.TireRange}%
                                         </text>
                                     </svg>
                                 </li>
