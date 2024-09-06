@@ -20,7 +20,7 @@ export default function RootLayout({
   return (
     <ClerkProvider>
         <html lang="en">
-          <body className={dm_sans.className}>
+          <body className={`${dm_sans.className} antialiased dark:bg-gray-700`}>
             {children}
           </body>
         </html>
