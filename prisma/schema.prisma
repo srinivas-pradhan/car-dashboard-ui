@@ -21,3 +21,21 @@ model DashboardUtilityTiles {
   BreakFluid        Int
   TireRange         Int
 }
+
+model CarRecommendations {
+  id                String            @id @default(auto()) @map("_id") @db.ObjectId
+  Userid            String            @unique
+  Cars              RecomCars
+}
+
+type RecomCars {
+  CurrentRecoms     MainRecomSchema[]
+}
+
+type MainRecomSchema {
+  Recommended       Int
+  CarName           String 
+  RentalCost        Int
+  ImageLink         String
+  Share             Int
+}

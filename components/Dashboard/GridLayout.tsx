@@ -13,15 +13,26 @@ const  GridLayout = () => {
     }
 
     const [ apidata, setapiData ] = useState({});
+    const [ recomdata, setrecomData ] = useState({});
+
 
     useEffect(() => {
-        fetch(`/api/dashboard/${user.primaryEmailAddress.emailAddress}`)
+        fetch(`/api/dashboard/${user.primaryEmailAddress.emailAddress}/topgrid`)
         .then((res) => res.json())
         .then((apidata) => {
             setapiData(apidata)
         })
     },[])
 
+    useEffect(() => {
+        fetch(`/api/dashboard/${user.primaryEmailAddress.emailAddress}/bottomgrid`)
+        .then((res) => res.json())
+        .then((recomdata) => {
+            setrecomData(recomdata)
+        })
+    },[])
+
+    console.log(recomdata.Cars)
     var energy_DS = 251.2 - (251.2 * `${apidata.Energy}`) / 100
     var rangeDS =  251.2 - (251.2 * `${apidata.Range}`) / 100
     var breakfluidDS =  251.2 - (251.2 * `${apidata.BreakFluid}`) / 100
