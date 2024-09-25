@@ -5,6 +5,8 @@ import 'react-circular-progressbar/dist/styles.css';
 import { useState, useEffect } from "react";
 import { useUser } from '@clerk/nextjs'
 
+import Image from 'next/image';
+
 
 const  GridLayout = () => {
     const { isLoaded, user  } = useUser();
@@ -31,8 +33,7 @@ const  GridLayout = () => {
             setrecomData(recomdata)
         })
     },[])
-
-    console.log(recomdata.Cars)
+    
     var energy_DS = 251.2 - (251.2 * `${apidata.Energy}`) / 100
     var rangeDS =  251.2 - (251.2 * `${apidata.Range}`) / 100
     var breakfluidDS =  251.2 - (251.2 * `${apidata.BreakFluid}`) / 100
@@ -384,7 +385,54 @@ const  GridLayout = () => {
                         w-80 
                         h-40"
                     >
-                        Text
+                        <div className="flex justify-start">
+                            <ul className="flex flex-row ml-10 mt-3 cursor-default">
+                                <li className="justify-center items-center">
+                                    <svg className="size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#475569">
+                                        <path d="M204-318q-22-38-33-78t-11-82q0-134 93-228t227-94h7l-64-64 56-56 160 160-160 160-56-56 64-64h-7q-100 0-170 70.5T240-478q0 26 6 51t18 49l-60 60ZM481-40 321-200l160-160 56 56-64 64h7q100 0 170-70.5T720-482q0-26-6-51t-18-49l60-60q22 38 33 78t11 82q0 134-93 228t-227 94h-7l64 64-56 56Z"/>
+                                    </svg>
+                                </li>
+                                <li className="text-sm flex items-center text-black">
+                                    {recomdata?.Cars?.CurrentRecoms[0]?.Recommended}% Recommend
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="flex items-center justify-center mt-2">
+                            <Image
+                                src={recomdata?.Cars?.CurrentRecoms[0]?.ImageLink}
+                                width={170}
+                                height={170}
+                                alt="Picture of the recommended car."
+                            />
+                        </div>
+                        <div className="font-bold ml-10 text-base text-black">
+                            {recomdata?.Cars?.CurrentRecoms[0]?.CarName}
+                        </div>
+                        <div className="ml-10">
+                            <ul className="flex flex-row cursor-default items-center">
+                                <li className="">
+                                    <svg className="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="24px" fill="#475569">
+                                        <path d="m600-200-56-57 143-143H300q-75 0-127.5-52.5T120-580q0-75 52.5-127.5T300-760h20v80h-20q-42 0-71 29t-29 71q0 42 29 71t71 29h387L544-624l56-56 240 240-240 240Z"/>
+                                    </svg>
+                                </li>
+                                <li className="ml-3 text-slate-600 text-xs">
+                                    {recomdata?.Cars?.CurrentRecoms[0]?.Share}
+                                </li>
+                                <li className="ml-3 text-slate-600 text-xs">
+                                    <svg className="size-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="24px" fill="#475569">
+                                        <path d="m370-80-16-128q-13-5-24.5-12T307-235l-119 50L78-375l103-78q-1-7-1-13.5v-27q0-6.5 1-13.5L78-585l110-190 119 50q11-8 23-15t24-12l16-128h220l16 128q13 5 24.5 12t22.5 15l119-50 110 190-103 78q1 7 1 13.5v27q0 6.5-2 13.5l103 78-110 190-118-50q-11 8-23 15t-24 12L590-80H370Zm70-80h79l14-106q31-8 57.5-23.5T639-327l99 41 39-68-86-65q5-14 7-29.5t2-31.5q0-16-2-31.5t-7-29.5l86-65-39-68-99 42q-22-23-48.5-38.5T533-694l-13-106h-79l-14 106q-31 8-57.5 23.5T321-633l-99-41-39 68 86 64q-5 15-7 30t-2 32q0 16 2 31t7 30l-86 65 39 68 99-42q22 23 48.5 38.5T427-266l13 106Zm42-180q58 0 99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5 41Zm-2-140Z"/>
+                                    </svg>
+                                </li>                                
+                                <li className="ml-3 text-slate-600 text-xs">
+                                    <svg className="size-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="24px" fill="#475569">
+                                        <path d="m422-232 207-248H469l29-227-185 267h139l-30 208ZM320-80l40-280H160l360-520h80l-40 320h240L400-80h-80Zm151-390Z"/>
+                                    </svg>
+                                </li>
+                                <li className="text-slate-600 text-xs ml-28">
+                                    {recomdata?.Cars?.CurrentRecoms[0]?.RentalCost}/h
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                     <li className="
                         bg-custom-blue 
@@ -397,7 +445,54 @@ const  GridLayout = () => {
                         w-80 
                         h-40"
                     >
-                        Text
+                        <div className="flex justify-start">
+                            <ul className="flex flex-row ml-10 mt-3 cursor-default">
+                                <li className="justify-center items-center">
+                                    <svg className="size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#475569">
+                                        <path d="M204-318q-22-38-33-78t-11-82q0-134 93-228t227-94h7l-64-64 56-56 160 160-160 160-56-56 64-64h-7q-100 0-170 70.5T240-478q0 26 6 51t18 49l-60 60ZM481-40 321-200l160-160 56 56-64 64h7q100 0 170-70.5T720-482q0-26-6-51t-18-49l60-60q22 38 33 78t11 82q0 134-93 228t-227 94h-7l64 64-56 56Z"/>
+                                    </svg>
+                                </li>
+                                <li className="text-sm flex items-center text-black">
+                                    {recomdata?.Cars?.CurrentRecoms[1]?.Recommended}% Recommend
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="flex items-center justify-center mt-2">
+                            <Image
+                                src={recomdata?.Cars?.CurrentRecoms[1]?.ImageLink}
+                                width={170}
+                                height={170}
+                                alt="Picture of the recommended car."
+                            />
+                        </div>
+                        <div className="font-bold ml-10 text-base text-black">
+                            {recomdata?.Cars?.CurrentRecoms[1]?.CarName}
+                        </div>
+                        <div className="ml-10">
+                            <ul className="flex flex-row cursor-default items-center">
+                                <li className="">
+                                    <svg className="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="24px" fill="#475569">
+                                        <path d="m600-200-56-57 143-143H300q-75 0-127.5-52.5T120-580q0-75 52.5-127.5T300-760h20v80h-20q-42 0-71 29t-29 71q0 42 29 71t71 29h387L544-624l56-56 240 240-240 240Z"/>
+                                    </svg>
+                                </li>
+                                <li className="ml-3 text-slate-600 text-xs">
+                                    {recomdata?.Cars?.CurrentRecoms[1]?.Share}
+                                </li>
+                                <li className="ml-3 text-slate-600 text-xs">
+                                    <svg className="size-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="24px" fill="#475569">
+                                        <path d="m370-80-16-128q-13-5-24.5-12T307-235l-119 50L78-375l103-78q-1-7-1-13.5v-27q0-6.5 1-13.5L78-585l110-190 119 50q11-8 23-15t24-12l16-128h220l16 128q13 5 24.5 12t22.5 15l119-50 110 190-103 78q1 7 1 13.5v27q0 6.5-2 13.5l103 78-110 190-118-50q-11 8-23 15t-24 12L590-80H370Zm70-80h79l14-106q31-8 57.5-23.5T639-327l99 41 39-68-86-65q5-14 7-29.5t2-31.5q0-16-2-31.5t-7-29.5l86-65-39-68-99 42q-22-23-48.5-38.5T533-694l-13-106h-79l-14 106q-31 8-57.5 23.5T321-633l-99-41-39 68 86 64q-5 15-7 30t-2 32q0 16 2 31t7 30l-86 65 39 68 99-42q22 23 48.5 38.5T427-266l13 106Zm42-180q58 0 99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5 41Zm-2-140Z"/>
+                                    </svg>
+                                </li>                                
+                                <li className="ml-3 text-slate-600 text-xs">
+                                    <svg className="size-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="24px" fill="#475569">
+                                        <path d="m422-232 207-248H469l29-227-185 267h139l-30 208ZM320-80l40-280H160l360-520h80l-40 320h240L400-80h-80Zm151-390Z"/>
+                                    </svg>
+                                </li>
+                                <li className="text-slate-600 text-xs ml-28">
+                                    {recomdata?.Cars?.CurrentRecoms[1]?.RentalCost}/h
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                     <li className="
                         bg-custom-pink 
@@ -410,7 +505,54 @@ const  GridLayout = () => {
                         w-80 
                         h-40"
                     >
-                        Text
+                        <div className="flex justify-start">
+                            <ul className="flex flex-row ml-10 mt-3 cursor-default">
+                                <li className="justify-center items-center">
+                                    <svg className="size-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" fill="#475569">
+                                        <path d="M204-318q-22-38-33-78t-11-82q0-134 93-228t227-94h7l-64-64 56-56 160 160-160 160-56-56 64-64h-7q-100 0-170 70.5T240-478q0 26 6 51t18 49l-60 60ZM481-40 321-200l160-160 56 56-64 64h7q100 0 170-70.5T720-482q0-26-6-51t-18-49l60-60q22 38 33 78t11 82q0 134-93 228t-227 94h-7l64 64-56 56Z"/>
+                                    </svg>
+                                </li>
+                                <li className="text-sm flex items-center text-black">
+                                    {recomdata?.Cars?.CurrentRecoms[2]?.Recommended}% Recommend
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="flex items-center justify-center mt-2">
+                            <Image
+                                src={recomdata?.Cars?.CurrentRecoms[2]?.ImageLink}
+                                width={140}
+                                height={140}
+                                alt="Picture of the recommended car."
+                            />
+                        </div>
+                        <div className="font-bold ml-10 text-base text-black">
+                            {recomdata?.Cars?.CurrentRecoms[2]?.CarName}
+                        </div>
+                        <div className="ml-10">
+                            <ul className="flex flex-row cursor-default items-center">
+                                <li className="">
+                                    <svg className="size-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="24px" fill="#475569">
+                                        <path d="m600-200-56-57 143-143H300q-75 0-127.5-52.5T120-580q0-75 52.5-127.5T300-760h20v80h-20q-42 0-71 29t-29 71q0 42 29 71t71 29h387L544-624l56-56 240 240-240 240Z"/>
+                                    </svg>
+                                </li>
+                                <li className="ml-3 text-slate-600 text-xs">
+                                    {recomdata?.Cars?.CurrentRecoms[2]?.Share}
+                                </li>
+                                <li className="ml-3 text-slate-600 text-xs">
+                                    <svg className="size-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="24px" fill="#475569">
+                                        <path d="m370-80-16-128q-13-5-24.5-12T307-235l-119 50L78-375l103-78q-1-7-1-13.5v-27q0-6.5 1-13.5L78-585l110-190 119 50q11-8 23-15t24-12l16-128h220l16 128q13 5 24.5 12t22.5 15l119-50 110 190-103 78q1 7 1 13.5v27q0 6.5-2 13.5l103 78-110 190-118-50q-11 8-23 15t-24 12L590-80H370Zm70-80h79l14-106q31-8 57.5-23.5T639-327l99 41 39-68-86-65q5-14 7-29.5t2-31.5q0-16-2-31.5t-7-29.5l86-65-39-68-99 42q-22-23-48.5-38.5T533-694l-13-106h-79l-14 106q-31 8-57.5 23.5T321-633l-99-41-39 68 86 64q-5 15-7 30t-2 32q0 16 2 31t7 30l-86 65 39 68 99-42q22 23 48.5 38.5T427-266l13 106Zm42-180q58 0 99-41t41-99q0-58-41-99t-99-41q-59 0-99.5 41T342-480q0 58 40.5 99t99.5 41Zm-2-140Z"/>
+                                    </svg>
+                                </li>                                
+                                <li className="ml-3 text-slate-600 text-xs">
+                                    <svg className="size-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960" width="24px" fill="#475569">
+                                        <path d="m422-232 207-248H469l29-227-185 267h139l-30 208ZM320-80l40-280H160l360-520h80l-40 320h240L400-80h-80Zm151-390Z"/>
+                                    </svg>
+                                </li>
+                                <li className="text-slate-600 text-xs ml-28">
+                                    {recomdata?.Cars?.CurrentRecoms[2]?.RentalCost}/h
+                                </li>
+                            </ul>
+                        </div>
                     </li>
                 </ul>
 

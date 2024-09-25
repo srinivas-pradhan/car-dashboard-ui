@@ -37,5 +37,5 @@ type MainRecomSchema {
   CarName           String 
   RentalCost        Int
   ImageLink         String
-  Share             Int
+  Share             String
 }
