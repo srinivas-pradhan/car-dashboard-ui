@@ -16,6 +16,8 @@ const  GridLayout = () => {
 
     const [ apidata, setapiData ] = useState({});
     const [ recomdata, setrecomData ] = useState({});
+    const [ graphdata, setgraphdata ] = useState({});
+    const [ performdata, setperformdata ] = useState({});
 
 
     useEffect(() => {
@@ -33,7 +35,25 @@ const  GridLayout = () => {
             setrecomData(recomdata)
         })
     },[])
+
+    useEffect(() => {
+        fetch(`/api/dashboard/${user.primaryEmailAddress.emailAddress}/charts/carstatistics`)
+        .then((res) => res.json())
+        .then((graphdata) => {
+            setgraphdata(graphdata)
+        })
+    },[])
+
+    useEffect(() => {
+        fetch(`/api/dashboard/${user.primaryEmailAddress.emailAddress}/charts/performance`)
+        .then((res) => res.json())
+        .then((performdata) => {
+            setperformdata(performdata)
+        })
+    },[])
     
+    console.log(graphdata)
+    console.log(performdata)
     var energy_DS = 251.2 - (251.2 * `${apidata.Energy}`) / 100
     var rangeDS =  251.2 - (251.2 * `${apidata.Range}`) / 100
     var breakfluidDS =  251.2 - (251.2 * `${apidata.BreakFluid}`) / 100

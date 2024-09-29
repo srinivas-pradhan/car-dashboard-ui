@@ -17,7 +17,7 @@ export async function GET (
         if(!params.userid){
             return new NextResponse("UserId is required", { status: 400 });
         }
-        const file = await fs.readFile(process.cwd() + '/utils/DistanceFuel.json', 'utf8');
+        const file = await fs.readFile(process.cwd() + '/utils/Performance.json', 'utf8');
         const data = JSON.parse(file);
         
         return NextResponse.json(file)
